@@ -75,7 +75,7 @@ jobs:
         run: |
           env | sort
           echo ${{ runner.os }} ${{ runner.arch }}
-      - name: Install dependencies on Oracle Linux 8
+      - name: Set up prerequisites (Linux-only)
         if: runner.os == 'Linux'
         run: |
           dnf -y update
